@@ -1,0 +1,4 @@
+Provides an easier way of deploying your WoW addon into your WoW Interface Addon directory with Apache Ant.
+
+After deploying, all you have to do is alt-tab back into the game and go /reloadui to make WoW reparse your
+latest changes to your addon.

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project name="${addon.name}" default="deploy" basedir=".">
+  <property file="build.properties"/>
+  
+  <!-- DEPRECATED DO NOT USE THIS SHIZZ -->
+  <target name="deploy" description="Copy code to World of Warcraft Interface Addons directory" >
+    
+    <echo>Cleaning ...</echo>
+    <mkdir dir="${deploy.dir}/${addon.name}" />
+    <delete failonerror="false" includeemptydirs="true">
+      <fileset dir="${deploy.dir}/${addon.name}" includes="**/*" />  
+    </delete>
+    
+    <echo>Copying ...</echo>
+    <copy todir="${deploy.dir}/${addon.name}">
+      <fileset dir="." excludes="build* README* **/.DS_Store"/>
+    </copy>
+  </target>
+</project>
